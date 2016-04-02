@@ -16,6 +16,7 @@
 		E7D54A3D1CAFFDF40089FFD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D54A3B1CAFFDF40089FFD2 /* LaunchScreen.storyboard */; };
 		E7D54A481CAFFDF50089FFD2 /* ContactListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D54A471CAFFDF50089FFD2 /* ContactListTests.m */; };
 		E7D54A531CAFFDF50089FFD2 /* ContactListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D54A521CAFFDF50089FFD2 /* ContactListUITests.m */; };
+		E7D54A611CAFFE8B0089FFD2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D54A601CAFFE8B0089FFD2 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		E7D54A4E1CAFFDF50089FFD2 /* ContactListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D54A521CAFFDF50089FFD2 /* ContactListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactListUITests.m; sourceTree = "<group>"; };
 		E7D54A541CAFFDF50089FFD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7D54A601CAFFE8B0089FFD2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D54A611CAFFE8B0089FFD2 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 		E7D54A1E1CAFFDF40089FFD2 = {
 			isa = PBXGroup;
 			children = (
+				E7D54A601CAFFE8B0089FFD2 /* CoreData.framework */,
 				E7D54A291CAFFDF40089FFD2 /* ContactList */,
 				E7D54A461CAFFDF50089FFD2 /* ContactListTests */,
 				E7D54A511CAFFDF50089FFD2 /* ContactListUITests */,
@@ -500,6 +504,7 @@
 				E7D54A591CAFFDF50089FFD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7D54A5A1CAFFDF50089FFD2 /* Build configuration list for PBXNativeTarget "ContactListTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +513,7 @@
 				E7D54A5C1CAFFDF50089FFD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7D54A5D1CAFFDF50089FFD2 /* Build configuration list for PBXNativeTarget "ContactListUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +522,7 @@
 				E7D54A5F1CAFFDF50089FFD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
