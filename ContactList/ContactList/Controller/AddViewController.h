@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AddViewController.h
 //  ContactList
 //
 //  Created by Miralem Cebic on 02/04/16.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface AddViewController : UIViewController
 
+@property (nonatomic, strong) NSManagedObjectModel *contact;
 
 @end
-

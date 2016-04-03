@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E7D54A2C1CAFFDF40089FFD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D54A2B1CAFFDF40089FFD2 /* main.m */; };
 		E7D54A2F1CAFFDF40089FFD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D54A2E1CAFFDF40089FFD2 /* AppDelegate.m */; };
-		E7D54A321CAFFDF40089FFD2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D54A311CAFFDF40089FFD2 /* ViewController.m */; };
 		E7D54A351CAFFDF40089FFD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D54A331CAFFDF40089FFD2 /* Main.storyboard */; };
 		E7D54A381CAFFDF40089FFD2 /* ContactList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7D54A361CAFFDF40089FFD2 /* ContactList.xcdatamodeld */; };
 		E7D54A3A1CAFFDF40089FFD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D54A391CAFFDF40089FFD2 /* Assets.xcassets */; };
@@ -17,6 +16,8 @@
 		E7D54A481CAFFDF50089FFD2 /* ContactListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D54A471CAFFDF50089FFD2 /* ContactListTests.m */; };
 		E7D54A531CAFFDF50089FFD2 /* ContactListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D54A521CAFFDF50089FFD2 /* ContactListUITests.m */; };
 		E7D54A611CAFFE8B0089FFD2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D54A601CAFFE8B0089FFD2 /* CoreData.framework */; };
+		E7D54A641CAFFF210089FFD2 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D54A631CAFFF210089FFD2 /* TableViewController.m */; };
+		E7D54A681CB0017B0089FFD2 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D54A671CB0017B0089FFD2 /* AddViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +42,6 @@
 		E7D54A2B1CAFFDF40089FFD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E7D54A2D1CAFFDF40089FFD2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7D54A2E1CAFFDF40089FFD2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E7D54A301CAFFDF40089FFD2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E7D54A311CAFFDF40089FFD2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E7D54A341CAFFDF40089FFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7D54A371CAFFDF40089FFD2 /* ContactList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactList.xcdatamodel; sourceTree = "<group>"; };
 		E7D54A391CAFFDF40089FFD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +54,10 @@
 		E7D54A521CAFFDF50089FFD2 /* ContactListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactListUITests.m; sourceTree = "<group>"; };
 		E7D54A541CAFFDF50089FFD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7D54A601CAFFE8B0089FFD2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E7D54A621CAFFF210089FFD2 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = Controller/TableViewController.h; sourceTree = "<group>"; };
+		E7D54A631CAFFF210089FFD2 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = Controller/TableViewController.m; sourceTree = "<group>"; };
+		E7D54A661CB0017B0089FFD2 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddViewController.h; path = Controller/AddViewController.h; sourceTree = "<group>"; };
+		E7D54A671CB0017B0089FFD2 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddViewController.m; path = Controller/AddViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +112,7 @@
 			children = (
 				E7D54A2D1CAFFDF40089FFD2 /* AppDelegate.h */,
 				E7D54A2E1CAFFDF40089FFD2 /* AppDelegate.m */,
-				E7D54A301CAFFDF40089FFD2 /* ViewController.h */,
-				E7D54A311CAFFDF40089FFD2 /* ViewController.m */,
+				E7D54A651CAFFF250089FFD2 /* Controller */,
 				E7D54A331CAFFDF40089FFD2 /* Main.storyboard */,
 				E7D54A391CAFFDF40089FFD2 /* Assets.xcassets */,
 				E7D54A3B1CAFFDF40089FFD2 /* LaunchScreen.storyboard */,
@@ -145,6 +147,17 @@
 				E7D54A541CAFFDF50089FFD2 /* Info.plist */,
 			);
 			path = ContactListUITests;
+			sourceTree = "<group>";
+		};
+		E7D54A651CAFFF250089FFD2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E7D54A621CAFFF210089FFD2 /* TableViewController.h */,
+				E7D54A631CAFFF210089FFD2 /* TableViewController.m */,
+				E7D54A661CB0017B0089FFD2 /* AddViewController.h */,
+				E7D54A671CB0017B0089FFD2 /* AddViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,10 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D54A681CB0017B0089FFD2 /* AddViewController.m in Sources */,
 				E7D54A381CAFFDF40089FFD2 /* ContactList.xcdatamodeld in Sources */,
-				E7D54A321CAFFDF40089FFD2 /* ViewController.m in Sources */,
 				E7D54A2F1CAFFDF40089FFD2 /* AppDelegate.m in Sources */,
 				E7D54A2C1CAFFDF40089FFD2 /* main.m in Sources */,
+				E7D54A641CAFFF210089FFD2 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
