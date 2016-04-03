@@ -18,6 +18,7 @@
 		E7D54A611CAFFE8B0089FFD2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D54A601CAFFE8B0089FFD2 /* CoreData.framework */; };
 		E7D54A641CAFFF210089FFD2 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D54A631CAFFF210089FFD2 /* TableViewController.m */; };
 		E7D54A681CB0017B0089FFD2 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D54A671CB0017B0089FFD2 /* AddViewController.m */; };
+		E7D54A6A1CB143620089FFD2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D54A691CB143620089FFD2 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		E7D54A631CAFFF210089FFD2 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = Controller/TableViewController.m; sourceTree = "<group>"; };
 		E7D54A661CB0017B0089FFD2 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddViewController.h; path = Controller/AddViewController.h; sourceTree = "<group>"; };
 		E7D54A671CB0017B0089FFD2 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddViewController.m; path = Controller/AddViewController.m; sourceTree = "<group>"; };
+		E7D54A691CB143620089FFD2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D54A6A1CB143620089FFD2 /* MessageUI.framework in Frameworks */,
 				E7D54A611CAFFE8B0089FFD2 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +92,7 @@
 		E7D54A1E1CAFFDF40089FFD2 = {
 			isa = PBXGroup;
 			children = (
+				E7D54A691CB143620089FFD2 /* MessageUI.framework */,
 				E7D54A601CAFFE8B0089FFD2 /* CoreData.framework */,
 				E7D54A291CAFFDF40089FFD2 /* ContactList */,
 				E7D54A461CAFFDF50089FFD2 /* ContactListTests */,

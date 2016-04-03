@@ -8,8 +8,9 @@
 
 #import "AddViewController.h"
 #import <CoreData/CoreData.h>
+#import <MessageUI/MessageUI.h>
 
-@interface AddViewController ()
+@interface AddViewController ()<MFMessageComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *name;
 @property (weak, nonatomic) IBOutlet UITextField *phonenumber;
 
@@ -74,11 +75,44 @@
 }
 - (IBAction)makePhoneCall:(UIButton *)sender
 {
-
+    NSURL *phoneURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", self.phonenumber.text]];
+    [[UIApplication sharedApplication] openURL:phoneURL];
 }
 - (IBAction)sendSMSMessage:(UIButton *)sender
 {
+    MFMessageComposeViewController *textCom = [[MFMessageComposeViewController alloc] init];
+    textCom.messageComposeDelegate = self;
+    if ([MFMessageComposeViewController canSendText]) {
 
+        textCom.recipients = @[self.phonenumber.text];
+        textCom.body = [NSString stringWithFormat:@"Hi %@", self.name.text];
+
+        [self presentViewController:textCom animated:YES completion:^{
+
+        }];
+    } else {
+        NSLog(@"Can not send message");
+    }
 }
 
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller
+                 didFinishWithResult:(MessageComposeResult)result
+{
+    switch (result) {
+        case MessageComposeResultCancelled:
+            NSLog(@"Cancelled");
+            break;
+        case MessageComposeResultFailed:
+            NSLog(@"Failed");
+            break;
+        case MessageComposeResultSent:
+            NSLog(@"Sent");
+            break;
+        default:
+            break;
+    }
+    [controller dismissViewControllerAnimated:YES completion:^{
+
+    }];
+}
 @end
