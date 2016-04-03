@@ -7,6 +7,7 @@
 //
 
 #import "TableViewController.h"
+#import "AddViewController.h"
 #import <CoreData/CoreData.h>
 
 @interface TableViewController ()
@@ -68,30 +69,36 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"
                                                             forIndexPath:indexPath];
     
-    
+    NSManagedObject *contact = self.contacts[indexPath.row];
+    cell.textLabel.text = [contact valueForKey:@"name"];
+    cell.detailTextLabel.text = [contact valueForKey:@"phonenumber"];
     
     return cell;
 }
 
-/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSManagedObjectContext *moContext = [self managedObjectContext];
+        NSManagedObject *currentContact = self.contacts[indexPath.row];
+        [moContext deleteObject:currentContact];
+
+        NSError *error = nil;
+        [moContext save:&error];
+
+        [self.contacts removeObjectAtIndex:indexPath.row];
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
@@ -107,14 +114,19 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"detail"]) {
+        AddViewController *destinationController = segue.destinationViewController;
+        NSManagedObjectModel *currentContact = self.contacts[self.tableView.indexPathForSelectedRow.row];
+        destinationController.contact = currentContact;
+    }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end
